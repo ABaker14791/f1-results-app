@@ -19,9 +19,12 @@ function App() {
       setDrivers(
         driverArray.map(function (driver, id) {
           return (
-            <div className="container mx-auto max-w-2xl flex justify-between border-2 p-2">
+            <div
+              key={id}
+              className="container mx-auto max-w-2xl flex justify-between border-2 p-2"
+            >
               <p>Position: {driver.position}</p>
-              <p key={id} className="mx-12">
+              <p className="mx-12">
                 {" " + driver.Driver.givenName + " "}
                 {driver.Driver.familyName}
               </p>
